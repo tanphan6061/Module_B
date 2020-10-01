@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Booking Platform</title>
+    <!--    load css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--    load library-->
+    <script src="vendor/axios.min.js"></script>
+    <script src="vendor/vue.min.js"></script>
+    <script src="vendor/vue-router.min.js"></script>
+</head>
+<body class="bg-light">
+<div id="app">
+    <base-header></base-header>
+    <main class="p-5 m-5 rounded border shadow-sm bg-white">
+        <div v-if="store.alert.mess&&store.alert.type" :key="store.alert.timer" :class="'bg-'+store.alert.type"
+             class="alert position-fixed text-white">
+            {{store.alert.mess}}
+        </div>
+        <router-view></router-view>
+    </main>
+</div>
+
+<!--load config and component-->
+<script src="js/config/api.js"></script>
+<script src="js/store/index.js"></script>
+<script src="js/component/base-header.js"></script>
+
+<!--load view per page-->
+<script src="js/view/error404.js"></script>
+<script src="js/view/user/login.js"></script>
+<script src="js/view/events/index.js"></script>
+<script src="js/view/events/detail.js"></script>
+<script src="js/view/events/registration.js"></script>
+<script src="js/view/sessions/detail.js"></script>
+
+<!--load router and app-->
+<script src="js/router/routes.js"></script>
+<script src="js/router/index.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

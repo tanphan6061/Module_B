@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a:hover{
+    text-decoration: none !important;
+}
+
+/*alert*/
+.alert{
+    top:80px;
+    z-index: 9999;
+    animation: 2 2s alternate forwards alert;
+    max-width: 250px !important;
+}
+@keyframes alert {
+   0% {left: -500px}
+    50% {left: 103px}
+}
+/*index*/
+h2{
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.event{
+     box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.4);
+ }
+
+.event:hover{
+    box-shadow: 1px 1px 5px 1px rgba(0,123,255,0.4);
+    cursor: pointer;
+}
+
+.event > div:first-child{
+    color: #007bff;
+    font-size: 24px;
+}
+
+.event > div:first-child:hover{
+    color: #0056b3;
+}
+
+/*event-detail*/
+.time-line{
+    margin-left: 360px;
+    display: flex;
+    margin-top: 50px;
+}
+
+.channel, .room{
+    width: 170px;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+}
+
+.channel{
+    background: #557788;
+}
+
+.room{
+    background: rgba(131, 40, 214, 0.71);
+}
+
+.session{
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid black;
+    color: black;
+}
+
+.registered{
+    border: 2px solid green;
+    color: green;
+}
+
+
+/*registration*/
+.ticket{
+    height: 100px;
+    border:1px solid black;
+}
